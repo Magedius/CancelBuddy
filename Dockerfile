@@ -11,7 +11,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install all dependencies (needed for build)
-RUN npm ci --omit=optional && npm cache clean --force
+RUN npm ci && npm cache clean --force
 
 # Copy source code
 COPY . .
