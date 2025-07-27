@@ -1,3 +1,26 @@
+#!/usr/bin/env node
+
+console.log("=== CONTAINER STARTUP DEBUG ===");
+console.log("Current time:", new Date().toISOString());
+console.log("Working directory:", process.cwd());
+console.log("Node version:", process.version);
+console.log("Platform:", process.platform, process.arch);
+console.log("Environment:", process.env.NODE_ENV);
+console.log("Port env:", process.env.PORT);
+
+// Lisää process error handlers
+process.on('uncaughtException', (error) => {
+  console.error('💥 UNCAUGHT EXCEPTION:', error);
+  console.error('Stack trace:', error.stack);
+  process.exit(1);
+});
+
+process.on('unhandledRejection', (reason, promise) => {
+  console.error('💥 UNHANDLED REJECTION at:', promise, 'reason:', reason);
+  process.exit(1);
+});
+
+console.log("🚀 Starting imports...");
 import express, { type Request, Response, NextFunction } from "express";
 import cookieParser from "cookie-parser";
 import { registerRoutes } from "./routes";
