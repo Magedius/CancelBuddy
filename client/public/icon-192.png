@@ -1,0 +1,24 @@
+<svg width="192" height="192" viewBox="0 0 192 192" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="96" cy="96" r="96" fill="#6366f1"/>
+  
+  <!-- Main Content Background -->
+  <circle cx="96" cy="96" r="80" fill="white" fill-opacity="0.1"/>
+  
+  <!-- Cancel/X Symbol -->
+  <g transform="translate(96, 96)">
+    <!-- X Lines -->
+    <line x1="-24" y1="-24" x2="24" y2="24" stroke="white" stroke-width="8" stroke-linecap="round"/>
+    <line x1="24" y1="-24" x2="-24" y2="24" stroke="white" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Money/Dollar Symbol -->
+  <g transform="translate(96, 130)">
+    <text x="0" y="0" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle">€</text>
+  </g>
+  
+  <!-- App Name -->
+  <g transform="translate(96, 60)">
+    <text x="0" y="0" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">CB</text>
+  </g>
+</svg>
